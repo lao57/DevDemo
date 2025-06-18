@@ -1,0 +1,211 @@
+<Fragment>
+  <PropertyDefinitions>
+    <Categories>
+      <Category Name="Basic Logic" />
+      <Category Name="Process Logic" Description="Process Logic" />
+      <Category Name="Crossing Logic" Description="Crossing Logic" />
+      <Category Name="Transport Logic" Description="Transport Logic" />
+      <Category Name="Travel Logic" Description="Travel Logic" />
+      <Category Name="Routing Logic" Description="Routing Logic" />
+      <Category Name="Routing Logic/Destination" Description="Routing Logic/Destination" />
+      <Category Name="Routing Logic/Network Path" Description="Routing Logic/Network Path" />
+      <Category Name="Population" Description="Population" InitiallyExpanded="False" />
+      <Category Name="Statistic Element" Description="Statistic Element" />
+      <Category Name="Time Period Pattern" Description="Time Period Pattern" />
+      <Category Name="Reporting &amp; Logging" Description="Reporting &amp; Logging" InitiallyExpanded="False" />
+      <Category Name="Stopping Conditions" Description="Stopping Conditions" InitiallyExpanded="False" />
+      <Category Name="Input Flow Control" Description="Input Flow Control" />
+      <Category Name="Handling &amp; Storage Characteristics" Description="Handling &amp; Storage Characteristics" InitiallyExpanded="False" />
+      <Category Name="Financials" Description="Financials" InitiallyExpanded="False" />
+      <Category Name="Financials/Transport Costs" Description="Transport Costs" InitiallyExpanded="False" />
+      <Category Name="Financials/Resource Costs" Description="Resource Costs" InitiallyExpanded="False" />
+      <Category Name="Shortest Paths Logic" Description="Shortest Paths Logic" />
+      <Category Name="Add-On Process Triggers" Description="Add-On Process Triggers" InitiallyExpanded="False" />
+      <Category Name="Advanced Options" Description="Advanced Options" InitiallyExpanded="False" />
+    </Categories>
+    <Overrides>
+      <Override Name="ReportStatistics" Visible="False" InheritDefaultValue="True" />
+      <Override Name="ParentCostCenter" Visible="False" InheritDefaultValue="True" />
+      <Override Name="InitialCost" Visible="False" InheritDefaultValue="True" />
+      <Override Name="InitialCostRate" Visible="False" InheritDefaultValue="True" />
+      <Override Name="ResourceIdleCostRate" Visible="False" InheritDefaultValue="True" />
+      <Override Name="ResourceCostPerUse" Visible="False" InheritDefaultValue="True" />
+      <Override Name="ResourceUsageCostRate" Visible="False" InheritDefaultValue="True" />
+      <Override Name="LogResourceUsage" Visible="False" InheritDefaultValue="True" />
+      <Override Name="DisplayName" Visible="False" InheritDefaultValue="True" />
+      <Override Name="DisplayCategory" Visible="False" InheritDefaultValue="True" />
+      <Override Name="DisplayColor" Visible="False" InheritDefaultValue="True" />
+      <Override Name="IncludeInPlanResourceConstraints" Visible="False" InheritDefaultValue="True" />
+      <Override Name="CapacityType" Visible="False" InheritDefaultValue="True" />
+      <Override Name="InitialWorkSchedule" Visible="False" InheritDefaultValue="True" />
+      <Override Name="WorkDayExceptions" Visible="False" InheritDefaultValue="True" />
+      <Override Name="WorkPeriodExceptions" Visible="False" InheritDefaultValue="True" />
+      <Override Name="InitialCapacity" Visible="False" InheritDefaultValue="True" />
+      <Override Name="RankingRule" Visible="False" InheritDefaultValue="True" />
+      <Override Name="RankingExpression" Visible="False" InheritDefaultValue="True" />
+      <Override Name="DynamicSelectionRule" Visible="False" InheritDefaultValue="True" />
+      <Override Name="CurrentSizeIndex" Visible="False" InheritDefaultValue="True" />
+      <Override Name="TransferInConstraintsType" Visible="False" InheritDefaultValue="True" />
+      <Override Name="TransferInCondition" Visible="False" InheritDefaultValue="True" />
+      <Override Name="TransferOutConstraintsType" Visible="False" InheritDefaultValue="True" />
+      <Override Name="TransferOutCondition" Visible="False" InheritDefaultValue="True" />
+      <Override Name="ExpectedSetupTimeExpression" Visible="False" InheritDefaultValue="True" />
+      <Override Name="ExpectedOperationTimeExpression" Visible="False" InheritDefaultValue="True" />
+    </Overrides>
+  </PropertyDefinitions>
+  <States />
+  <Events />
+  <UsedObjects>
+    <UsedObject Name="TransferNode" />
+    <UsedObject Name="ModelEntity" />
+  </UsedObjects>
+  <Elements />
+  <Processes />
+  <Objects>
+    <Entity Name="DefaultEntity" Type="ModelEntity" Location="-4 0 3" YawDeg="90" Size="0.5 0.5 0.25" Scope="Public" DefaultEntity="True">
+      <Properties>
+        <Property Name="InitialCost" Units="USD">0.0</Property>
+        <Property Name="InitialCostRate" Units="USD per Hour">0.0</Property>
+        <Property Name="ResourceIdleCostRate" Units="USD per Hour">0.0</Property>
+        <Property Name="ResourceCostPerUse" Units="USD">0.0</Property>
+        <Property Name="ResourceUsageCostRate" Units="USD per Hour">0.0</Property>
+        <Property Name="DynamicSelectionRule">
+          <Value>None</Value>
+        </Property>
+      </Properties>
+      <Graphics ExternallyVisible="True">
+        <SymbolInstances CurrentAnimationExpression="ModelEntity.Animation">
+          <SymbolInstance Center="0 0 0" ExternallyVisible="True">
+            <SymbolRef Id="[UseExternalSymbol]" />
+            <FlowDecoration>
+              <MaterialRef Id="817b660d-cc73-4318-9e1f-14523849345d" />
+            </FlowDecoration>
+            <DefaultFlowDecoration>
+              <MaterialRef Id="817b660d-cc73-4318-9e1f-14523849345d" />
+            </DefaultFlowDecoration>
+          </SymbolInstance>
+        </SymbolInstances>
+      </Graphics>
+    </Entity>
+    <Fixed Name="Source1" Type="Source" Location="-5.125 0 -0.625" YawDeg="90" Size="1.4971191147327423 1.023445227010846 0.9999997068977042" Scope="Public">
+      <AssociatedNodes>
+        <Node Name="Output@Source1" Type="TransferNode" Location="-3.875 0 -0.625" YawDeg="90" Scope="Public">
+          <Properties>
+            <Property Name="InitialCost" Units="USD">0.0</Property>
+            <Property Name="InitialCostRate" Units="USD per Hour">0.0</Property>
+            <Property Name="ResourceIdleCostRate" Units="USD per Hour">0.0</Property>
+            <Property Name="ResourceCostPerUse" Units="USD">0.0</Property>
+            <Property Name="ResourceUsageCostRate" Units="USD per Hour">0.0</Property>
+            <Property Name="DynamicSelectionRule">
+              <Value>None</Value>
+            </Property>
+            <Property Name="RouteRequestDynamicSelectionRule">
+              <Value>None</Value>
+            </Property>
+          </Properties>
+          <Graphics ExternallyVisible="True" />
+        </Node>
+      </AssociatedNodes>
+      <Properties>
+        <Property Name="InitialCost" Units="USD">0.0</Property>
+        <Property Name="InitialCostRate" Units="USD per Hour">0.0</Property>
+        <Property Name="ResourceIdleCostRate" Units="USD per Hour">0.0</Property>
+        <Property Name="ResourceCostPerUse" Units="USD">0.0</Property>
+        <Property Name="ResourceUsageCostRate" Units="USD per Hour">0.0</Property>
+        <Property Name="DynamicSelectionRule">
+          <Value>None</Value>
+        </Property>
+        <Property Name="EntityType">DefaultEntity</Property>
+        <Property Name="CapitalCost" Units="USD">0.0</Property>
+        <Property Name="OutputBufferCostPerUse" Units="USD">0.0</Property>
+        <Property Name="OutputBufferHoldingCostRate" Units="USD per Hour">0.0</Property>
+      </Properties>
+      <Graphics ExternallyVisible="True">
+        <SymbolInstances>
+          <SymbolInstance Center="0 0 0" ExternallyVisible="True">
+            <SymbolRef Id="[UseExternalSymbol]" />
+          </SymbolInstance>
+        </SymbolInstances>
+        <AttachedObjects IndexList="0">
+          <Queue Queue="OutputBuffer.Contents" ExternallyVisible="True">
+            <Points>
+              <Point Location="-4.125 0 -0.125" />
+              <Point Location="-1.125 0 -0.125" />
+            </Points>
+          </Queue>
+        </AttachedObjects>
+      </Graphics>
+    </Fixed>
+    <Fixed Name="Sink1" Type="Sink" Location="4.625 0 -0.625" YawDeg="90" Size="1.5049811730262042 1.0288199785700887 1.0000003397741482" Scope="Public">
+      <AssociatedNodes>
+        <Node Name="Input@Sink1" Type="BasicNode" Location="3.375 0 -0.625" YawDeg="90" Scope="Public">
+          <Properties>
+            <Property Name="InitialCost" Units="USD">0.0</Property>
+            <Property Name="InitialCostRate" Units="USD per Hour">0.0</Property>
+            <Property Name="ResourceIdleCostRate" Units="USD per Hour">0.0</Property>
+            <Property Name="ResourceCostPerUse" Units="USD">0.0</Property>
+            <Property Name="ResourceUsageCostRate" Units="USD per Hour">0.0</Property>
+            <Property Name="DynamicSelectionRule">
+              <Value>None</Value>
+            </Property>
+          </Properties>
+          <Graphics ExternallyVisible="True" />
+        </Node>
+      </AssociatedNodes>
+      <Properties>
+        <Property Name="InitialCost" Units="USD">0.0</Property>
+        <Property Name="InitialCostRate" Units="USD per Hour">0.0</Property>
+        <Property Name="ResourceIdleCostRate" Units="USD per Hour">0.0</Property>
+        <Property Name="ResourceCostPerUse" Units="USD">0.0</Property>
+        <Property Name="ResourceUsageCostRate" Units="USD per Hour">0.0</Property>
+        <Property Name="DynamicSelectionRule">
+          <Value>None</Value>
+        </Property>
+        <Property Name="CapitalCost" Units="USD">0.0</Property>
+        <Property Name="InputBufferCostPerUse" Units="USD">0.0</Property>
+        <Property Name="InputBufferHoldingCostRate" Units="USD per Hour">0.0</Property>
+      </Properties>
+      <Graphics ExternallyVisible="True">
+        <SymbolInstances>
+          <SymbolInstance Center="0 0 0" ExternallyVisible="True">
+            <SymbolRef Id="[UseExternalSymbol]" />
+          </SymbolInstance>
+        </SymbolInstances>
+        <AttachedObjects IndexList="1">
+          <Queue Queue="InputBuffer.Contents" ExternallyVisible="True">
+            <Points>
+              <Point Location="3.625 0 -0.125" />
+              <Point Location="0.625 0 -0.125" />
+            </Points>
+          </Queue>
+        </AttachedObjects>
+      </Graphics>
+    </Fixed>
+  </Objects>
+  <Schedules>
+    <Schedule Name="StandardWeek" CycleDays="7" StartDate="2011-01-03T00:00:00" Description="Standard Work Week Schedule">
+      <DayPatternRefs>
+        <DayPatternRef DayNumber="1" DayPattern="StandardDay" />
+        <DayPatternRef DayNumber="2" DayPattern="StandardDay" />
+        <DayPatternRef DayNumber="3" DayPattern="StandardDay" />
+        <DayPatternRef DayNumber="4" DayPattern="StandardDay" />
+        <DayPatternRef DayNumber="5" DayPattern="StandardDay" />
+      </DayPatternRefs>
+    </Schedule>
+  </Schedules>
+  <DayPatterns>
+    <DayPattern Name="StandardDay" Description="Standard 8-5 Work Day">
+      <Periods>
+        <Period Start="08:00:00" End="12:00:00" Value="1" CostMultiplier="1" />
+        <Period Start="13:00:00" End="17:00:00" Value="1" CostMultiplier="1" />
+      </Periods>
+    </DayPattern>
+  </DayPatterns>
+  <SaveHistories>
+    <SaveHistory SavedDateTime="2025-06-18T15:55:05" ProductVersion="18.276.45400.0" Edition="RPS" />
+  </SaveHistories>
+  <Graphics>
+    <AnimationSetup MinimumNumberOfFramesToDisplayIdleAnimation="10" />
+  </Graphics>
+</Fragment>
+<!-- 51BDLVFgzdJdhiQQgrKkuHPM9ImkOapfHxRrR87A77er70FdhrcgQvGXktvNUrGH2zW1NbvXXsOFv0rCINsxPA== -->
